@@ -2,10 +2,13 @@ var myLink = document.getElementById("clicker");
 
 var handleTheClick = function(event){
   var thisLink = this;
-  
+  var userInput = document.getElementById("word")
   var req = new XMLHttpRequest();
 
-  req.open("get", "/hey_there");
+  req.open("get", "/" + userInput.value);
+  // if Judy you wrote Judy is that someone's name
+  //if 40 bleh you wrote 40 is that how old you are
+  // else you wrote djfla. whatever
 
   req.addEventListener("load", function(){    
     thisLink.innerText = this.response;
