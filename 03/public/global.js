@@ -1,19 +1,22 @@
-var req = new XMLHttpRequest();
 
-req.open("get", "/path1");
+//using solution for global-solution-1 because document.getElementById("clicker"").onclick = new KMLHttpRequest() worked until step 2 of this atomic.
 
-req.addEventListener("load", function(){
-  alert(this.response);
-});
 
-req.send();
-
-//  ---------------------------------------------------------------------------
+//  ----------------------------I don't know what this line is for----------------------------------
 
 var myLink = document.getElementById("clicker");
 
 var handleTheClick = function(event){
-  // ?????????
+  var req = new XMLHttpRequest();
+  var theLink = this;
+  
+  req.open("get", theLink.getAttribute("href"));
+
+  req.addEventListener("load", function(){
+    theLink.innerText= this.response
+  });
+
+  req.send();
   
   // Prevent the link from refreshing the DOM.
   event.preventDefault();
