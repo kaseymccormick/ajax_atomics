@@ -16,7 +16,7 @@ Currently, the XHR object is created and sent immediately when the page loads. T
 Modify the JavaScript so that the XHR object is created and sent only when the link on the page (`myLink`, in the JavaScript) is clicked.
 
 (There is a solution file, if you need it. This is a simple problem, so you might overthink it.)
-
+document.getElementById("clicker").onclick = start the xhr obj
 # Exercise 2
 
 The path of the XHR request is being hard-coded: `req.open("get", "/path1");`.
@@ -24,6 +24,8 @@ The path of the XHR request is being hard-coded: `req.open("get", "/path1");`.
 Use `this` to get the value of `myLink`'s `href` attribute. Set the path of the XHR request using that.
 
 (There is a solution file, if you need it.)
+
+this.getAttribute("href")
 
 ## Reflection
 
