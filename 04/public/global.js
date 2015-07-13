@@ -1,8 +1,10 @@
 var myLink = document.getElementById("clicker");
 
+var userInput = document.getElementById("word")
+
 var handleTheClick = function(event){
   var thisLink = this;
-  var userInput = document.getElementById("word")
+ 
   var req = new XMLHttpRequest();
 
   req.open("get", "/" + userInput.value);
